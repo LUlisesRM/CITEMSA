@@ -10,26 +10,33 @@
     <title>Login</title>
 </head>
 
-<body>
+<body class=fondo>
 <div>
     <header>
 
     </header>
 </div>
     
-<div  >
-        <form method="POST" action="login.php" class="login">
-            <div class="form-group">
+<div >
+    <form method="POST" action="login.php" class="login">
+        <div align="center">
+            <img src="media/logo_citemsa.png" alt="LOGO CITEMSA" width = "150px"> <br><br>
+        </div>
+        <div class="form-group">
+            <div>
                 <label>Credencial MB</label><br>
-                <input name="credencial" placeholder="Escriba su credencial de Metrobus" required>
+                <input name="credencial" placeholder="Escriba su credencial de Metrobus" required size="40">
             </div>
-            <div class="form-group">
-                <label>Contraseña</label><br>
-                <input type="text" name="pass" placeholder="Escriba su contraseña" required>
+            <div>
+             <label>Contraseña</label><br>
+             <input type="password" name="pass" placeholder="Escriba su contraseña" required size="40">
+            </div><br>
+            <div align="center">
+             <button type="submit" >Inicar Sesion</button>
             </div>
-            
-            <button type="submit" >Inicar Sesion</button>
-        </form>
+        </div>
+        
+    </form>
 </div>
 
 </body>
