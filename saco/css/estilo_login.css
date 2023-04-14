@@ -3,10 +3,10 @@ body{
     'Open Sans', 'Helvetica Neue', sans-serif,BlinkMacSystemFont,"Segoe UI",Roboto,
     "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji",
     "Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    margin-top: 200px;
+    margin-top: 120px;
     padding: 0;
     width: 100%;
-    position: relative;
+    
     line-height: 1.5;
     
 }
@@ -22,11 +22,11 @@ body{
 
 .login{
     background-color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 17px;
-    width: 300px;
-    height: 700px;
-    position: absolute;
+    width: 350px;
+    height: max-content;
+    position: relative;
     margin: 48px 600px 0px;
 }
 
