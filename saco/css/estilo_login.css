@@ -11,12 +11,13 @@ body{
     
 }
 
+
+
 .fondo{
     background-image: url(../media/vistasuperior.jpg);
     background-size: cover;
     background-repeat: no-repeat, repeat;
     background-attachment: fixed;
-    overflow: scroll;
 }
 
 

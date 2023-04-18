@@ -8,7 +8,95 @@ $sql="SELECT * FROM operadores";
 
  $count=mysqli_num_rows($consulta);
 ?>
-<table border="2px"> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 400px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  background-color: #f1f1f1;
+  height: 400px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <h2>SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href='../salir.php'>SALIR</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>BASE DE DATOS OPERADORES</h1>
+
+    <table border="2px"> 
         <tr>
             <th>CREDENCIAL METROBUS</th>
             <th>NOMINA</th>
@@ -45,4 +133,11 @@ $sql="SELECT * FROM operadores";
 <button><a href="edicion.php">Editar</a></button>
 <button><a href="registrar.php">Regristrar</a></button>
 <br>
-<button><a href='../salir.php'> SALIR</a></button>
+    
+</article>
+</section>
+
+
+</body>
+</html>
+
