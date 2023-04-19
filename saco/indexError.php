@@ -9,27 +9,39 @@
     <title>Login con session</title>
 </head>
 
-<body>
+<body class=fondo>
 <div>
     <header>
-        
+
     </header>
 </div>
     
-<div  >
-        <form method="POST" action="login.php" class="login">
-                <h3 color: red>LOGIN ERROR</h3>
-            <div class="form-group">
-                <label>Credencial MB</label><br>
-                <input type="text" name="credencial" placeholder="Escriba su correo" required>
+<div >
+    <form method="POST" action="login.php" class="login">
+        <div>
+            <img src="media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
+            <img src="media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"> <br><br>
+        </div>
+
+        <div>
+            <h4 align="center" color: red>USUARIO Y/O CONTRASEÑA INCORRECTA</h4>
+        </div>
+        
+        <div class="form-group">
+            <div>
+                <label>Usuario</label><br>
+                <input name="credencial" placeholder="Escriba su credencial de Metrobus" required size="47">
             </div>
-            <div class="form-group">
-                <label>Contraseña</label><br>
-                <input type="text" name="pass" placeholder="Escriba su contraseña" required>
+            <div>
+             <label>Contraseña</label><br>
+             <input type="password" name="pass" placeholder="Escriba su contraseña" required size="47">
+            </div><br>
+            <div align="center">
+             <button type="submit" >Inicar Sesion</button>
             </div>
-            
-            <button type="submit" >Inicar Sesion</button>
-        </form>
+        </div>
+        
+    </form>
 </div>
 
 </body>

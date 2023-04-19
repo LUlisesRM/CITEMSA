@@ -26,11 +26,11 @@
         <div class="form-group">
             <div>
                 <label>Credencial MB</label><br>
-                <input name="credencial" placeholder="Escriba su credencial de Metrobus" required size="40">
+                <input name="credencial" placeholder="Escriba su credencial de Metrobus" required size="47">
             </div>
             <div>
              <label>Contraseña</label><br>
-             <input type="password" name="pass" placeholder="Escriba su contraseña" required size="40">
+             <input type="password" name="pass" placeholder="Escriba su contraseña" required size="47">
             </div><br>
             <div align="center">
              <button type="submit" >Inicar Sesion</button>

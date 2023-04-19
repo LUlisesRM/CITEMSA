@@ -15,80 +15,26 @@ $sql="SELECT * FROM operadores";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 15%;
-  height: 400px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 85%;
-  background-color: #f1f1f1;
-  height: 400px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+    <link rel="stylesheet" href="css/estilo_saco.css">
+    <title>SACO</title>
+    
 </head>
 <body>
 <header>
-  <h2>SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES</h2>
+  
+  <h2><img src="../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
+  SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
+  <img src="../media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"></h2>
+  
 </header>
 
 <section>
   <nav>
     <ul>
+    <li><a href='../salir.php'>INICIO</a></li><br>
+      <li><a href='../salir.php'>OPERACIONES</a></li><br>
+      <li><a href='../salir.php'>RECURUSOS HUMANOS</a></li><br>
+      <li><a href='../salir.php'>ADMINISTRACION</a></li><br>
       <li><a href='../salir.php'>SALIR</a></li>
     </ul>
   </nav>
