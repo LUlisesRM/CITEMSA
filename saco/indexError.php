@@ -24,7 +24,7 @@
         </div>
 
         <div>
-            <h4 align="center" color: red>USUARIO Y/O CONTRASEÑA INCORRECTA</h4>
+            <h4 align="center" > <FONT FACE="impact" SIZE=6 COLOR="red">USUARIO Y/O CONTRASEÑA INCORRECTA</FONT></h4>
         </div>
         
         <div class="form-group">

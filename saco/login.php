@@ -14,6 +14,7 @@ $array = mysqli_fetch_array($consulta);
 
 if ($array['id_padmon'] > 0) {
 
+    
     // en la variable session se guarda el numero de cuenta esto para poder acarrearla
     $_SESSION['credencial_mb'] = $credencial;
 
