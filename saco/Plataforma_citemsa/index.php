@@ -1,12 +1,8 @@
 <?php
 include ("../conexion.php");
-
-//consulta
-$sql="SELECT * FROM operadores";
-
- $consulta=$conexion->query($sql);
-
- $count=mysqli_num_rows($consulta);
+session_start();
+$credencial= $_SESSION['credencial_mb'];
+$sql = "SELECT * FROM padmon WHERE credencial_mb = '$credencial'";
 ?>
 
 <!DOCTYPE html>
@@ -38,17 +34,28 @@ $sql="SELECT * FROM operadores";
   </nav>
   
   <article>
-    <h1><font SIZE=5>Bienvenido </font> 
+    <h1><font SIZE=5>BIENVENIDO 
     
-    <?php 
-    $sql="SELECT * FROM padmon";
-    $consulta=$conexion->query($sql);
-    $row=mysqli_fetch_assoc($consulta);
+    <?php
+        $consulta = mysqli_query($conexion,$sql);
+        $count=mysqli_num_rows($consulta);
 
-     
+        if ($count>0){
+
+            
+            while($row=mysqli_fetch_assoc($consulta) ){
+
+            echo $row['apellido_paterno'].' '.$row['apellido_materno'].' '.$row['nombre'] ;
     
-    echo $row['apellido_paterno'].' '.$row['apellido_materno'].' '.$row['nombre'];?> 
+            
+            }
+        } else{
+        echo "<h1>Sin registro</h1>";
+        }
+
+    ?>
   
+  </font> 
   </h1>
     
    

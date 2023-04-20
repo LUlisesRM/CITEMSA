@@ -65,3 +65,5 @@ INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apelli
 fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
 VALUES ('3182','57','AGUILAR','CABRERA','HECTOR', 'ACTIVO','2013-11-05', 'TIPO C','C520621','2024-11-19',
 'AUCH670305HDFGBC06','GU5','30876718229','5521444349','15280');
+
+/* UPDATE padmon set codigo_postal = '55540' where id_padmon = 2 */
