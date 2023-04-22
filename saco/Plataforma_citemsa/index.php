@@ -24,13 +24,22 @@ $sql = "SELECT * FROM padmon WHERE credencial_mb = '$credencial'";
 
 <section>
   <nav>
-    <ul>
-    <li><a href='index.php'>INICIO</a></li><br>
-      <li><a href='operaciones/index.php'>OPERACIONES</a></li><br>
-      <li><a href='administracion/index.php'>ADMINISTRACION</a></li><br>
-      <li><a href='rrhh/index.php'>RECURUSOS HUMANOS</a></li><br>
-      <li><a href='../salir.php'>SALIR</a></li>
-    </ul>
+    <div class=sidebar>
+      <h2>Menú</h2>
+      <ul class=menu id=menu>
+        <li class=menu__item><a href='index.php'>INICIO</a></li>
+        <li class=menu__item><a href='operaciones/index.php'>OPERACIONES</a>
+          <ul class=submenu>
+            <li class=menu__item><a href="" class=menu__link>Horarios</a></li>
+            <li class=menu__item><a href="" class=menu__link>Checador</a></li>
+            <li class=menu__item><a href="" class=menu__link>Reloj</a></li>
+          </ul>
+        </li>
+        <li><a href='administracion/index.php'>ADMINISTRACION</a></li>
+        <li><a href='rrhh/index.php'>RECURUSOS HUMANOS</a></li>
+        <li><a href='../salir.php'>SALIR</a></li>
+      </ul>
+    </div>
   </nav>
   
   <article>

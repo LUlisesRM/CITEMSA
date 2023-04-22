@@ -29,13 +29,22 @@ $sql="SELECT * FROM operadores";
 <section>
  
   <nav>
-    <ul>
-    <li><a href='../index.php'>INICIO</a></li><br>
-      <li><a href='../operaciones/index.php'>OPERACIONES</a></li><br>
-      <li><a href='../administracion/index.php'>ADMINISTRACION</a></li><br>
-      <li><a href='../rrhh/index.php'>RECURUSOS HUMANOS</a></li><br>
-      <li><a href='../../salir.php'>SALIR</a></li>
-    </ul>
+  <div class=sidebar>
+      <h2>Menú</h2>
+      <ul>
+        <li><a href='../index.php'>INICIO</a></li>
+        <li><a href='../operaciones/index.php'>OPERACIONES</a>
+          <ul>
+            <li>Horarios</li>
+            <li>Checador</li>
+            <li>Reloj</li>
+          </ul>
+        </li>
+        <li><a href='../administracion/index.php'>ADMINISTRACION</a></li>
+        <li><a href='index.php'>RECURUSOS HUMANOS</a></li>
+        <li><a href='../../salir.php'>SALIR</a></li>
+      </ul>
+    </div>
   </nav>
   
   <article>

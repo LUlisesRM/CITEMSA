@@ -28,27 +28,81 @@
 
   }
 
+.sidebar{
+  position:absolute;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color:#fff;
+  outline: 1px solid #2a2a2a;
+}
 
-  /* Create two columns/boxes that floats next to each other */
-  nav {
-    float: left;
-    width: 15%;
-    height: 630px; /* only for demonstration, should be removed */
-    background: #ccc;
-    padding: 20px;
-    list-style: none;
-  }
-  
-  /* Style the list inside the menu */
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
+.sidebar h2{
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  background: #666;
+}
+
+.sidebar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li{
+  outline: 1px solid #2a2a2a;
+  transition: all 0.3s;
+}
+
+.sidebar li:hover{
+  background: #444;
+  border-left: 2px solid #eee;
+}
+
+.sidebar a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+ /*
+.menu, .submenu{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+menu{
+  background: #555;
+  width: 100%;
+}
+
+.menu__link{
+  display: block;
+  padding: 20px;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.submenu{
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.submenu, .menu__link{
+  background: #333;
+  padding-left: 50px;
+}
+*/
   
   article {
     float: left;
+    margin-left: 250px;
     padding: 20px;
-    width: 85%;
+    width: 95%;
     background-color: #f1f1f1;
     height: 630px; /* only for demonstration, should be removed */
   }
@@ -68,10 +122,11 @@
     color: white;
   }
   
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
   @media (max-width: 600px) {
-    nav, article {
+    nav, article header{
       width: 100%;
       height: auto;
     }
   }
+
+ 
