@@ -1,1 +1,0 @@
-UPDATE padmon set codigo_postal = '55540' where id_padmon = 2

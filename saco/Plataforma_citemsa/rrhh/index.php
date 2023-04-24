@@ -1,12 +1,8 @@
 <?php
 include ("../../conexion.php");
-
-//consulta
-$sql="SELECT * FROM operadores";
-
- $consulta=$conexion->query($sql);
-
- $count=mysqli_num_rows($consulta);
+session_start();
+$credencial= $_SESSION['credencial_mb'];
+$sql = "SELECT * FROM padmon WHERE credencial_mb = '$credencial'";
 ?>
 
 <!DOCTYPE html>
@@ -27,54 +23,37 @@ $sql="SELECT * FROM operadores";
 </header>
 
 <section>
- 
   <nav>
   <div class=sidebar>
       <h2>Menú</h2>
       <ul>
         <li><a href='../index.php'>INICIO</a></li>
-        <li><a href='../operaciones/index.php'>OPERACIONES</a>
-          <ul>
-            <li>Horarios</li>
-            <li>Checador</li>
-            <li>Reloj</li>
+        <li><a href='index.php'>OPERACIONES</a></li>
+        <li><a href='../administracion/index.php'>ADMINISTRACION</a></li>
+        <li><a href='index.php'>RECURSOS HUMANOS</a>
+          <ul class=submenu>
+            <li class=menu__item><a href="base_de_datos/index.php" class=menu__link>Base de Datos</a></li>
           </ul>
         </li>
-        <li><a href='../administracion/index.php'>ADMINISTRACION</a></li>
-        <li><a href='index.php'>RECURUSOS HUMANOS</a></li>
         <li><a href='../../salir.php'>SALIR</a></li>
       </ul>
     </div>
   </nav>
   
   <article>
-    <h1>BASE DE DATOS OPERADORES</h1>
-
-    <table border="2px"> 
-        <tr>
-            <th>CREDENCIAL METROBUS</th>
-            <th>NOMINA</th>
-            <th>NOMBRE</th>
-            <th>ESTATUS</th>
-            <th>TIPO DE LICENCIA</th>
-            <th>ID DE LICENCIA</th>
-            <th>VENCIMIENTO DE LA LICENCIA</th>
-        </tr>
+  <h1><font SIZE=5>RECURSOS HUMANOS 
+    
     <?php
+        $consulta = mysqli_query($conexion,$sql);
+        $count=mysqli_num_rows($consulta);
+
         if ($count>0){
 
+            
             while($row=mysqli_fetch_assoc($consulta) ){
 
-            echo "<tr>";
-            echo "<td>" .$row['credencial_mb']. "</td>";
-            echo "<td>" .$row['nomina']. "</td>";
-            echo "<td>".$row['apellido_paterno']. ' ' .$row['apellido_materno']. ' ' .$row['nombre']."</td>";
-            echo "<td>".$row['estatus']."</td>";
-            echo "<td>".$row['tipo_licencia']."</td>";
-            echo "<td>".$row['id_licencia']."</td>";
-            echo "<td>".$row['vencimiento_licencia']."</td>";
-            echo "</tr>";
-
+            /* echo $row['apellido_paterno'].' '.$row['apellido_materno'].' '.$row['nombre'] ; */
+    
             
             }
         } else{
@@ -82,12 +61,13 @@ $sql="SELECT * FROM operadores";
         }
 
     ?>
-</table>
-<br>
-<button><a href="edicion.php">Editar</a></button>
-<button><a href="registrar.php">Regristrar</a></button>
-<br>
+  
+  </font> 
+  </h1>
     
+   
+
+
 </article>
 </section>
 

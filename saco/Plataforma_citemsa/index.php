@@ -28,15 +28,13 @@ $sql = "SELECT * FROM padmon WHERE credencial_mb = '$credencial'";
       <h2>Menú</h2>
       <ul class=menu id=menu>
         <li class=menu__item><a href='index.php'>INICIO</a></li>
-        <li class=menu__item><a href='operaciones/index.php'>OPERACIONES</a>
+        <li class=menu__item><a href='operaciones/index.php'>OPERACIONES</a></li>
+        <li><a href='administracion/index.php'>ADMINISTRACION</a></li>
+        <li><a href='rrhh/index.php'>RECURSOS HUMANOS</a>
           <ul class=submenu>
-            <li class=menu__item><a href="" class=menu__link>Horarios</a></li>
-            <li class=menu__item><a href="" class=menu__link>Checador</a></li>
-            <li class=menu__item><a href="" class=menu__link>Reloj</a></li>
+            <li class=menu__item><a href="rrhh/base_de_datos/index.php" class=menu__link>Base de Datos</a></li>
           </ul>
         </li>
-        <li><a href='administracion/index.php'>ADMINISTRACION</a></li>
-        <li><a href='rrhh/index.php'>RECURUSOS HUMANOS</a></li>
         <li><a href='../salir.php'>SALIR</a></li>
       </ul>
     </div>
@@ -54,7 +52,7 @@ $sql = "SELECT * FROM padmon WHERE credencial_mb = '$credencial'";
             
             while($row=mysqli_fetch_assoc($consulta) ){
 
-            echo $row['apellido_paterno'].' '.$row['apellido_materno'].' '.$row['nombre'] ;
+            echo $row['nombre'].' '.$row['apellido_paterno'].' '.$row['apellido_materno'] ;
     
             
             }

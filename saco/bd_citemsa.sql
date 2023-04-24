@@ -61,6 +61,10 @@ alter table operadores
 change column id_operador id_operador int(10) not null auto_increment,
 add primary key (id_operador);
 
+alter table padmon
+change column id_padmon id_padmon int(10) not null auto_increment,
+add primary key (id_padmon);
+
 INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
 fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
 VALUES ('3182','57','AGUILAR','CABRERA','HECTOR', 'ACTIVO','2013-11-05', 'TIPO C','C520621','2024-11-19',

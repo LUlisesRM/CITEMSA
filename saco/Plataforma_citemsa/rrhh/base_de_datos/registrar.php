@@ -1,5 +1,5 @@
 <?php
-include ("../../conexion.php");
+include ("../../../conexion.php");
 
 //consulta
 $sql="SELECT * FROM operadores";
@@ -15,27 +15,34 @@ $sql="SELECT * FROM operadores";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo_saco.css">
+    <link rel="stylesheet" href="../../estilo_saco.css">
     <title>SACO</title>
     
 </head>
 <body>
 <header>
-  <h2><img src="../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
+  <h2><img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
   SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
-  <img src="../../media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"></h2>
+  <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"></h2>
 </header>
 
 <section>
  
   <nav>
-    <ul>
-    <li><a href='../index.php'>INICIO</a></li><br>
-      <li><a href='../operaciones/index.php'>OPERACIONES</a></li><br>
-      <li><a href='../administracion/index.php'>ADMINISTRACION</a></li><br>
-      <li><a href='../rrhh/index.php'>RECURUSOS HUMANOS</a></li><br>
-      <li><a href='../../salir.php'>SALIR</a></li>
-    </ul>
+  <div class=sidebar>
+      <h2>Menú</h2>
+      <ul>
+        <li><a href='../../index.php'>INICIO</a></li>
+        <li><a href='../../operaciones/index.php'>OPERACIONES</a></li>
+        <li><a href='../../administracion/index.php'>ADMINISTRACION</a></li>
+        <li><a href='../index.php'>RECURSOS HUMANOS</a>
+          <ul class=submenu>
+            <li class=menu__item><a href="index.php" class=menu__link>Base de Datos</a></li>
+          </ul>
+        </li>
+        <li><a href='../../../salir.php'>SALIR</a></li>
+      </ul>
+    </div>
   </nav>
   
   <article>
@@ -76,6 +83,24 @@ $sql="SELECT * FROM operadores";
 </table>
 
 <br>
+$credencial = $_POST['credencial_mb'];
+$nomina = $_POST['nomina'];
+$contraseña = $_POST["pass"];
+$paterno = $_POST['apellido_paterno'];
+$materno = $_POST['apellido_materno'];
+$nombre = $_POST['nombre'];
+$status = $_POST['estatus'];
+$contrato = $_POST['fecha_contrato'];
+$licencia = $_POST['tipo_licencia'];
+$id_licencia = $_POST['id_licencia'];
+$fecha_licencia = $_POST['vencimiento_licencia'];
+$curp = $_POST['curp'];
+$homoc = $_POST['homoclave'];
+$seguro = $_POST['nss'];
+$phone = $_POST['telefono'];
+$cp = $_POST['codigo_postal'];
+
+
 
     <h2>REGISTRAR OPERADOR</h2>
             <form action ='insertar.php' method='post'>
@@ -91,20 +116,17 @@ $sql="SELECT * FROM operadores";
                 <input name='nombre' type='text'>
                 <lable>ESTATUS:</lable>
                 <input name='estatus' type='text'>
-                <lable>CORREO INSTITUCIONAL:</lable>
-                <input name='correo_institucional' type='text'>
+                <lable>FECHA DE ALTA:</lable>
+                <input name='correo_institucional' type='date'>
                 <lable>CONTRASEÑA:</lable>
                 <input name='pass' type='text'> <br> <br>
                 <input type='submit' value ='Registrar'>
-                 
             </form>
-            <br>
+<br>
             <button><a href='index.php'>Cancelar</a></button>
-
-
+    
 </article>
 </section>
-
 
 </body>
 </html>

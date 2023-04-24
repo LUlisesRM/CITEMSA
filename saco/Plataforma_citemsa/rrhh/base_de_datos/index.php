@@ -1,5 +1,5 @@
 <?php
-include ("../../conexion.php");
+include ("../../../conexion.php");
 
 //consulta
 $sql="SELECT * FROM operadores";
@@ -15,19 +15,34 @@ $sql="SELECT * FROM operadores";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo_saco.css">
-    <title>EDICION</title>
+    <link rel="stylesheet" href="../../estilo_saco.css">
+    <title>SACO</title>
+    
 </head>
 <body>
 <header>
-  <h2>SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES</h2>
+  <h2><img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
+  SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
+  <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"></h2>
 </header>
 
 <section>
+ 
   <nav>
-    <ul>
-      <li><a href='../salir.php'>SALIR</a></li>
-    </ul>
+  <div class=sidebar>
+      <h2>Menú</h2>
+      <ul>
+        <li><a href='../../index.php'>INICIO</a></li>
+        <li><a href='../../operaciones/index.php'>OPERACIONES</a></li>
+        <li><a href='../../administracion/index.php'>ADMINISTRACION</a></li>
+        <li><a href='../index.php'>RECURSOS HUMANOS</a>
+          <ul class=submenu>
+            <li class=menu__item><a href="index.php" class=menu__link>Base de Datos</a></li>
+          </ul>
+        </li>
+        <li><a href='../../../salir.php'>SALIR</a></li>
+      </ul>
+    </div>
   </nav>
   
   <article>
@@ -42,7 +57,6 @@ $sql="SELECT * FROM operadores";
             <th>TIPO DE LICENCIA</th>
             <th>ID DE LICENCIA</th>
             <th>VENCIMIENTO DE LA LICENCIA</th>
-            <th>ACCIÓN</th>
         </tr>
     <?php
         if ($count>0){
@@ -57,8 +71,6 @@ $sql="SELECT * FROM operadores";
             echo "<td>".$row['tipo_licencia']."</td>";
             echo "<td>".$row['id_licencia']."</td>";
             echo "<td>".$row['vencimiento_licencia']."</td>";
-            echo "<td> <a href= actualizar.php?id=" .$row['id_operador']. ">editar</a> |
-                       <a href= eliminar.php?id=" .$row['id_operador']. ">eliminar</a> </td> ";
             echo "</tr>";
 
             
@@ -70,12 +82,14 @@ $sql="SELECT * FROM operadores";
     ?>
 </table>
 <br>
-<button><a href="index.php">Regresar</a></button>
-<br> 
-
+<button><a href="edicion.php">Editar</a></button>
+<button><a href="registrar.php">Regristrar</a></button>
+<br>
+    
 </article>
 </section>
 
 
 </body>
 </html>
+
