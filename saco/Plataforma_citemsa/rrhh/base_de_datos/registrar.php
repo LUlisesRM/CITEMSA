@@ -83,23 +83,6 @@ $sql="SELECT * FROM operadores";
 </table>
 
 <br>
-$credencial = $_POST['credencial_mb'];
-$nomina = $_POST['nomina'];
-$contraseña = $_POST["pass"];
-$paterno = $_POST['apellido_paterno'];
-$materno = $_POST['apellido_materno'];
-$nombre = $_POST['nombre'];
-$status = $_POST['estatus'];
-$contrato = $_POST['fecha_contrato'];
-$licencia = $_POST['tipo_licencia'];
-$id_licencia = $_POST['id_licencia'];
-$fecha_licencia = $_POST['vencimiento_licencia'];
-$curp = $_POST['curp'];
-$homoc = $_POST['homoclave'];
-$seguro = $_POST['nss'];
-$phone = $_POST['telefono'];
-$cp = $_POST['codigo_postal'];
-
 
 
     <h2>REGISTRAR OPERADOR</h2>
@@ -108,6 +91,8 @@ $cp = $_POST['codigo_postal'];
                 <input name='credencial_mb' type='text'>
                 <lable>NOMINA:</lable>
                 <input name='nomina' type='int'>
+                <lable>CONTRASEÑA:</lable>
+                <input name='contraseña' type='int'>
                 <lable>APELLIDO PATERNO:</lable>
                 <input name='apellido_paterno' type='text'>
                 <lable>APELLIDO MATERNO:</lable>
@@ -116,10 +101,25 @@ $cp = $_POST['codigo_postal'];
                 <input name='nombre' type='text'>
                 <lable>ESTATUS:</lable>
                 <input name='estatus' type='text'>
-                <lable>FECHA DE ALTA:</lable>
-                <input name='correo_institucional' type='date'>
-                <lable>CONTRASEÑA:</lable>
-                <input name='pass' type='text'> <br> <br>
+                <lable>FECHA DE CONTRATO:</lable>
+                <input name='fecha_contrato' type='date'>
+                <lable>TIPO DE LICENCIA:</lable>
+                <input name='tipo_licencia' type='text'>
+                <lable>ID LICENCIA:</lable>
+                <input name='id_licencia' type='text'>
+                <lable>VENCIMIENTO DE LICENCIA:</lable>
+                <input name='vencimiento_licencia' type='date'>
+                <lable>CURP:</lable>
+                <input name='curp' type='text'>
+                <lable>HOMOCLAVE:</lable>
+                <input name='homoclave' type='text'>
+                <lable>NUMERO DE SEGURO SOCIAL (NSS):</lable>
+                <input name='nss' type='int'>
+                <lable>TELEFONO:</lable>
+                <input name='telefono' type='int'>
+                <lable>CODIGO POSTAL:</lable>
+                <input name='codigo_postal' type='int'>
+                <br> <br>
                 <input type='submit' value ='Registrar'>
             </form>
 <br>

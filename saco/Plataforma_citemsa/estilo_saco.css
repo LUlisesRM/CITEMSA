@@ -19,14 +19,15 @@
 
   th{
     padding: 0;
-    display: table-cell;
+    display: contents;
     font-weight: 550;
   }
 
-  td{
+  td { 
+    padding: 5px 10px;
     text-align: center;
-
-  }
+    border: 1px solid #999;
+}
 
 .sidebar{
   position:absolute;
@@ -102,9 +103,9 @@ menu{
     float: left;
     margin-left: 250px;
     padding: 20px;
-    width: 95%;
+    width: 83%;
     background-color: #f1f1f1;
-    height: 630px; /* only for demonstration, should be removed */
+    height: 485px; /* only for demonstration, should be removed */
   }
   
   /* Clear floats after the columns */

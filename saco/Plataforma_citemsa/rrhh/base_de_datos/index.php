@@ -58,7 +58,7 @@ $sql="SELECT * FROM operadores";
             <th>ID DE LICENCIA</th>
             <th>VENCIMIENTO DE LA LICENCIA</th>
         </tr>
-    <?php
+<?php
         if ($count>0){
 
             while($row=mysqli_fetch_assoc($consulta) ){

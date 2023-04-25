@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0; 
+}
+
+.nav-bar{
+    background: #E38646;
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+.menu, .submenu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    
+menu{
+    background: #555;
+    width: 100%;
+}
+    
+.menu__link{
+    display: block;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+    
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+    
+.submenu, .menu__link{
+    background: #333;
+    padding-left: 50px;
+}
