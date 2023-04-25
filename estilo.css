@@ -1,47 +1,81 @@
+@import url('https://fonts.googlepis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
 *{
+    margin:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    margin:0; 
+    background: #eaebef;
+    font-family: 'Poppins',sans-serif; 
 }
 
-.nav-bar{
-    background: #E38646;
-    padding: 20px;
-    display: block;
-    color: white;
-    cursor: pointer;
-    font-size: 1.5em;
-    width: 100%;
+.nav{
+    width: 300px;
 }
 
-.menu, .submenu{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    }
-    
-menu{
-    background: #555;
-    width: 100%;
-}
-    
-.menu__link{
+.nav__link{
+    color: #303440;
     display: block;
-    padding: 20px;
-    color: white;
-    font-size: 1.2em;
+    padding: 15px 0;
     text-decoration: none;
 }
-    
-.submenu{
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s;
+
+.nav__link--inside{
+    border-radius: 6px;
+    padding-left: 20px;
+    text-align: left;
 }
-    
-.submenu, .menu__link{
-    background: #333;
-    padding-left: 50px;
+
+.nav__link--inside:hover{
+    background: #F6F8FA;
+}
+
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #fff;
+}
+
+.list__item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.list__item-click{
+    cursor: pointer;
+}
+
+.list__button{
+    display:flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+
+.list__arrow{
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.list__show{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
 }

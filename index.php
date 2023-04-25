@@ -8,22 +8,40 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="main-nav">
-        <ul class="menu" id="menu">
-            <li class="menu__item"><a href="inicio/index.php" class="menu__link">INICIO</a></li>
-            <li class="menu__item"><a href="" class="menu__link">NOSOTROS</a></li>
-            <li class="menu__item container-submenu">
-                <a href="" class="menu__link submenu-btn">PRODUCTOS <i></i></a>
-                <ul class="submenu">
-                    <li class="menu__item"><a href="" class="menu__link">Televisores</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Computadoras</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Videojuegos</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Smartphones</a></li>
-                </ul>
+    <nav class="nav">
+  
+        <ul class="list">
+            <li class="list__item">
+                <div class="list__button"><a href="" class="nav__link">INICIO</a>
+                </div>
             </li>
-            <li class="menu__item"><a href="" class="menu__link">CONTACTO</a></li>
+            
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click"><a href="" class="nav__link">SERVICIOS
+                    <img src="clip.png" width="25px" align=center class="list__arrow">
+                </a>
+                </div>
+                <ul class="list__show">
+                    <li class="list__inside"><a href="" class="nav__link nav__link--inside">Estoy dentro</a></li>
+                    <li class="list__inside"><a href="" class="nav__link nav__link--inside">Estoy dentro</a></li>
+                    <li class="list__inside"><a href="" class="nav__link nav__link--inside">Estoy dentro</a></li>
+                </ul>
+            
+            </li>
+
+            <li class="list__item">
+                <div class="list__button"><a href="" class="nav__link">ESTADISTICAS</a>
+                </div>
+            </li>
+
+            <li class="list__item">
+                <div class="list__button"><a href="" class="nav__link">CONTACTO</a>
+                </div>
+            </li>
+        
         </ul>
+    
     </nav>
-    <script> src="menu.js"</script>
+  
 </body>
 </html>
