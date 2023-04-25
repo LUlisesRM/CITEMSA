@@ -10,7 +10,7 @@
 <body>
     <nav class="main-nav">
         <ul class="menu" id="menu">
-            <li class="menu__item"><a href="" class="menu__link">INICIO</a></li>
+            <li class="menu__item"><a href="inicio/index.php" class="menu__link">INICIO</a></li>
             <li class="menu__item"><a href="" class="menu__link">NOSOTROS</a></li>
             <li class="menu__item container-submenu">
                 <a href="" class="menu__link submenu-btn">PRODUCTOS <i></i></a>

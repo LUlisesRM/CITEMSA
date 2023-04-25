@@ -20,7 +20,7 @@
     <form method="POST" action="login.php" class="login">
         <div>
             <img src="media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
-            <img src="media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"> <br><br>
+            <a href= "../inicio/index.php"><img src="media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"></a> <br><br>
         </div>
 
         <div>
