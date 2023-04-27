@@ -12,7 +12,7 @@
   
         <ul class="list">
             <li class="list__item">
-                <div class="list__button"><a href="" class="nav__link">INICIO</a>
+                <div class="list__button"><a href="inicio/index.php" class="nav__link">INICIO</a>
                 </div>
             </li>
             

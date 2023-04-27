@@ -67,10 +67,8 @@ $sql = "SELECT * FROM operadores WHERE id_operador = '$id'";
             echo "<tr>";
             echo "<td> <input type='text'value=" .$row['credencial_mb']. "> </td>";
             echo "<td> <input type='text'value=" .$row['nomina']. "> </td>";
-            echo "<td> <input type='text'value=" .$row['apellido_paterno']. "> 
-                 <input type='text'value=" .$row['apellido_materno']. ">
-                 <input type='text'value=" .$row['nombre']. "></td>";
-            echo "<td><input type='text'value=" .$row['estatus']."></td>";
+            echo "<td> <input type='text'value=" .$row['apellido_paterno'].' '.$row['apellido_materno'].' '.$row['nombre']."></td>"; 
+            echo "<td> <input type='text'value=" .$row['estatus']."></td>";
             echo "<td><input type='text'value=" .$row['tipo_licencia']."></td>";
             echo "<td><input type='text'value=" .$row['id_licencia']."></td>";
             echo "<td><input type='text'value=" .$row['vencimiento_licencia']."></td>";
