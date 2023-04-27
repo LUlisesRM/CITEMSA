@@ -1,7 +1,7 @@
 <?php
 include ("../../../conexion.php");
 
-$id = $_GET["id"];
+$id = $_POST["id"];
 $credencial = $_POST['credencial_mb'];
 $nomina = $_POST['nomina'];
 $paterno = $_POST['apellido_paterno'];
@@ -16,7 +16,7 @@ $fecha_licencia = $_POST['vencimiento_licencia'];
 //actualizar datos
 $sql = "UPDATE operadores SET credencial_mb = '$credencial', nomina = '$nomina', apellido_paterno ='$paterno', 
 apellido_materno = '$materno', nombre = '$nombre', estatus = '$status', tipo_licencia = '$licencia', id_licencia = '$id_licencia',
-vencimiento_licencia = '$fecha_licencia' WHERE id = '$id' ";
+vencimiento_licencia = '$fecha_licencia' WHERE id_operador = '$id' ";
 
 $consulta = mysqli_query($conexion, $sql);
 

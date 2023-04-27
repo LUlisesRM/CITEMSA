@@ -47,13 +47,7 @@ $sql = "SELECT * FROM operadores WHERE id_operador = '$id'";
 
     <table border="2px"> 
         <tr>
-            <th>CREDENCIAL METROBUS</th>
-            <th>NOMINA</th>
-            <th>NOMBRE</th>
-            <th>ESTATUS</th>
-            <th>TIPO DE LICENCIA</th>
-            <th>ID DE LICENCIA</th>
-            <th>VENCIMIENTO DE LA LICENCIA</th>
+            <th>EDITAR</th>
         </tr>
 <?php
         $consulta = mysqli_query($conexion,$sql);
@@ -64,16 +58,30 @@ $sql = "SELECT * FROM operadores WHERE id_operador = '$id'";
             
             while($row=mysqli_fetch_assoc($consulta) ){
 
+            echo "<form action='update.php' method = 'post'>";
             echo "<tr>";
-            echo "<td> <input type='text'value=" .$row['credencial_mb']. "> </td>";
-            echo "<td> <input type='text'value=" .$row['nomina']. "> </td>";
-            echo "<td> <input type='text'value=" .$row['apellido_paterno'].' '.$row['apellido_materno'].' '.$row['nombre']."></td>"; 
-            echo "<td> <input type='text'value=" .$row['estatus']."></td>";
-            echo "<td><input type='text'value=" .$row['tipo_licencia']."></td>";
-            echo "<td><input type='text'value=" .$row['id_licencia']."></td>";
-            echo "<td><input type='text'value=" .$row['vencimiento_licencia']."></td>";
-            echo "<td> <a href= update.php>actualizar</a>";
+            echo "<td>
+                  <input type='hidden'name = 'id' value=".$row['id_operador'].">";
+            echo "<label>CREDENCIAL DE METROBUS</label>
+                  <input type='text' name = 'credencial_mb' value=".$row['credencial_mb']."></br></br>";
+            echo "<label>NOMINA</label>
+                  <input type='text' name = 'nomina' value=" .$row['nomina']."></br></br>";
+            echo "<label>NOMBRE</label>
+                  <input type='text' name = 'apellido_paterno' value=".$row['apellido_paterno'].">
+                  <input type='text' name = 'apellido_materno' value=".$row['apellido_materno'].">
+                  <input type='text' name = 'nombre' value=".$row['nombre']."></br></br>"; 
+            echo "<label>ESTATUS</label>
+                  <input type='text' name = 'estatus' value=" .$row['estatus']."></br></br>";
+            echo "<label>TIPO DE LICENCIA</label>
+                  <input type='text' name = 'tipo_licencia' value=".$row['tipo_licencia']."></br></br>";
+            echo "<label>ID DE LICENCIA</label>
+                  <input type='text' name = 'id_licencia' value=".$row['id_licencia']."></br></br>";
+            echo "<label>VENCIMIENTO DE LICENCIA</label>
+                  <input type='date' name = 'vencimiento_licencia' value=".$row['vencimiento_licencia']."></br></br>";
+            echo "<input type='submit' value = 'ACEPTAR'> <button><a href='edicion.php'>CANCELAR</a></button>
+                  </td>";
             echo "</tr>";
+            echo "</form>";
             
             }
         } else{
@@ -82,10 +90,6 @@ $sql = "SELECT * FROM operadores WHERE id_operador = '$id'";
 
     ?>
 </table>
-
-<br>
-<button><a href="edicion.php">Regresar</a></button>
-<br>
     
 </article>
 </section>
