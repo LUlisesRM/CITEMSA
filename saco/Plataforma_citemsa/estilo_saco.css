@@ -25,14 +25,14 @@ form{
 }
 
 th{
-  padding: 0;
+  
   display: table-cell;
   font-weight: 550;
   text-align: center;
 }
 
 td{ 
-  padding: 5px 10px;
+  
   text-align: left;
   border: 1px solid #999;
 }
