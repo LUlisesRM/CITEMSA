@@ -21,7 +21,7 @@ $cp = $_POST['codigo_postal'];
 
 $sql = "INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
         fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
-        VALUES ('$credencial','$nomina','$contraseña','$paterno','$materno','$nombre', '$status','$contrato', '$licencia','$id_licencia',
+        VALUES ('$credencial','$nomina','$pass','$paterno','$materno','$nombre', '$status','$contrato', '$licencia','$id_licencia',
         '$fecha_licencia','$curp','$homoc','$seguro','$phone','$cp')";
 
 

@@ -84,6 +84,7 @@ $sql="SELECT * FROM operadores";
 <br>
 <button><a href="edicion.php">Editar</a></button>
 <button><a href="registrar.php">Regristrar</a></button>
+
 <br>
     
 </article>

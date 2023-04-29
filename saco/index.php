@@ -11,11 +11,6 @@
 </head>
 
 <body class=fondo>
-<div>
-    <header>
-
-    </header>
-</div>
     
 <div >
     <form method="POST" action="login.php" class="login">

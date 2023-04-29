@@ -22,122 +22,121 @@ $count = mysqli_num_rows($consulta);
 </head>
 
 <body>
-  <header>
-    <h2><img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="120px" align="left">
-      SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
-      <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="100px" align="right">
-    </h2>
-  </header>
+  <div class="contenido">
+    <header>
+      <h2><img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="120px" align="left">
+        SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
+        <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="100px" align="right">
+      </h2>
+    </header>
 
-  <section>
+    <section>
 
-    <nav>
-      <div class=sidebar>
-        <h2>Menú</h2>
-        <ul>
-          <li><a href='../../index.php'>INICIO</a></li>
-          <li><a href='../../operaciones/index.php'>OPERACIONES</a></li>
-          <li><a href='../../administracion/index.php'>ADMINISTRACION</a></li>
-          <li><a href='../index.php'>RECURSOS HUMANOS</a>
-            <ul class=submenu>
-              <li class=menu__item><a href="index.php" class=menu__link>Base de Datos</a></li>
-            </ul>
-          </li>
-          <li><a href='../../../salir.php'>SALIR</a></li>
-        </ul>
-      </div>
-    </nav>
+      <nav>
+        <div class=sidebar>
+          <h2>Menú</h2>
+          <ul>
+            <li><a href='../../index.php'>INICIO</a></li>
+            <li><a href='../../operaciones/index.php'>OPERACIONES</a></li>
+            <li><a href='../../administracion/index.php'>ADMINISTRACION</a></li>
+            <li><a href='../index.php'>RECURSOS HUMANOS</a>
+              <ul class=submenu>
+                <li class=menu__item><a href="index.php" class=menu__link>Base de Datos</a></li>
+              </ul>
+            </li>
+            <li><a href='../../../salir.php'>SALIR</a></li>
+          </ul>
+        </div>
+      </nav>
 
-    <article>
-      <h1>BASE DE DATOS OPERADORES</h1>
+      <article>
 
-      <table border="2px">
-        <tr>
-          <th>CREDENCIAL METROBUS</th>
-          <th>NOMINA</th>
-          <th>NOMBRE</th>
-          <th>ESTATUS</th>
-          <th>TIPO DE LICENCIA</th>
-          <th>ID DE LICENCIA</th>
-          <th>VENCIMIENTO DE LA LICENCIA</th>
-        </tr>
+        <h1>BASE DE DATOS OPERADORES</h1>
 
-        <?php
-
-        if ($count > 0) {
-
-          while ($row = mysqli_fetch_assoc($consulta)) {
-
-            echo "<tr>";
-            echo "<td>" . $row['credencial_mb'] . "</td>";
-            echo "<td>" . $row['nomina'] . "</td>";
-            echo "<td>" . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . ' ' . $row['nombre'] . "</td>";
-            echo "<td>" . $row['estatus'] . "</td>";
-            echo "<td>" . $row['tipo_licencia'] . "</td>";
-            echo "<td>" . $row['id_licencia'] . "</td>";
-            echo "<td>" . $row['vencimiento_licencia'] . "</td>";
-            echo "</tr>";
-          }
-        } else {
-          echo "<h1>Sin registro</h1>";
-        }
-
-        ?>
-      </table>
-
-
-
-      <table border="2px">
-        <tr>
-          <th>REGISTRAR</th>
-        </tr>
-        <form action='insertar.php' method='post'>
+        <table border="2px">
           <tr>
-            <td>
-              <lable>CREDENCIAL METROBUS:</lable>
-              <input name='credencial_mb' type='text'>
-              <lable>NOMINA:</lable>
-              <input name='nomina' type='int'> <br>
-              <lable>CONTRASEÑA:</lable>
-              <input name='contraseña' type='int'>
-              <lable>APELLIDO PATERNO:</lable>
-              <input name='apellido_paterno' type='text'> <br>
-              <lable>APELLIDO MATERNO:</lable>
-              <input name='apellido_materno' type='text'>
-              <lable>NOMBRE:</lable>
-              <input name='nombre' type='text'>
-              <lable>ESTATUS:</lable>
-              <input name='estatus' type='text'>
-              <lable>FECHA DE CONTRATO:</lable>
-              <input name='fecha_contrato' type='date'>
-              <lable>TIPO DE LICENCIA:</lable>
-              <input name='tipo_licencia' type='text'>
-              <lable>ID LICENCIA:</lable>
-              <input name='id_licencia' type='text'>
-              <lable>VENCIMIENTO DE LICENCIA:</lable>
-              <input name='vencimiento_licencia' type='date'>
-              <lable>CURP:</lable>
-              <input name='curp' type='text'>
-              <lable>HOMOCLAVE:</lable>
-              <input name='homoclave' type='text'>
-              <lable>NUMERO DE SEGURO SOCIAL (NSS):</lable>
-              <input name='nss' type='int'>
-              <lable>TELEFONO:</lable>
-              <input name='telefono' type='int'>
-              <lable>CODIGO POSTAL:</lable>
-              <input name='codigo_postal' type='int'>
-              <br> <br>
-              <input type='submit' value='ACEPTAR'> <button><a href='index.php'>CANCELAR</a></button>
-            </td>
+            <th>CREDENCIAL METROBUS</th>
+            <th>NOMINA</th>
+            <th>NOMBRE</th>
+            <th>ESTATUS</th>
+            <th>TIPO DE LICENCIA</th>
+            <th>ID DE LICENCIA</th>
+            <th>VENCIMIENTO DE LA LICENCIA</th>
           </tr>
-        </form>
-        <br>
-      </table>
 
+          <?php
 
+          if ($count > 0) {
 
-    </article>
+            while ($row = mysqli_fetch_assoc($consulta)) {
+
+              echo "<tr>";
+              echo "<td>" . $row['credencial_mb'] . "</td>";
+              echo "<td>" . $row['nomina'] . "</td>";
+              echo "<td>" . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . ' ' . $row['nombre'] . "</td>";
+              echo "<td>" . $row['estatus'] . "</td>";
+              echo "<td>" . $row['tipo_licencia'] . "</td>";
+              echo "<td>" . $row['id_licencia'] . "</td>";
+              echo "<td>" . $row['vencimiento_licencia'] . "</td>";
+              echo "</tr>";
+            }
+          } else {
+            echo "<h1>Sin registro</h1>";
+          }
+
+          ?>
+        </table>
+  </div>
+  </article>
   </section>
+
+  <div class="modal">
+    <div class="contenido_modal">
+      <h2>REGISTRAR</h2> <br>
+
+      <form action='insertar.php' method='post'>
+        <lable>CREDENCIAL METROBUS:</lable>
+        <input name='credencial_mb' required type='text'>
+        <lable>NOMINA:</lable>
+        <input name='nomina' required type='int'> <br>
+        <lable>CONTRASEÑA:</lable>
+        <input name='contraseña' required type='int'> <br><br>
+        <lable>APELLIDO PATERNO:</lable>
+        <input name='apellido_paterno' required type='text'>
+        <lable>APELLIDO MATERNO:</lable>
+        <input name='apellido_materno' required type='text'>
+        <lable>NOMBRE:</lable>
+        <input name='nombre' required type='text'> <br><br>
+
+        <lable>ESTATUS:</lable>
+        <input name='estatus' required type='text'>
+        <lable>FECHA DE CONTRATO:</lable>
+        <input name='fecha_contrato' required type='date'> <br><br>
+        <lable>TIPO DE LICENCIA:</lable>
+        <input name='tipo_licencia' required type='text'>
+        <lable>ID LICENCIA:</lable>
+        <input name='id_licencia' required type='text'>
+        <lable>VENCIMIENTO DE LICENCIA:</lable>
+        <input name='vencimiento_licencia' required type='date'> <br><br>
+
+        <lable>CURP:</lable>
+        <input name='curp' required type='text'>
+        <lable>HOMOCLAVE:</lable> 
+        <input name='homoclave' required type='text'><br>
+        <lable>NUMERO DE SEGURO SOCIAL (NSS):</lable>
+        <input name='nss' required type='int'><br>
+        <lable>TELEFONO:</lable>
+        <input name='telefono' required type='int'>
+        <lable>CODIGO POSTAL:</lable>
+        <input name='codigo_postal' required type='int'>
+        <br> <br>
+        <input type='submit' value='ACEPTAR'> <button><a href='index.php'>CANCELAR</a></button>
+
+
+      </form>
+
+    </div>
+  </div>
 
 </body>
 
