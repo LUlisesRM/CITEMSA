@@ -10,14 +10,61 @@ body {
   
 /* Style the header */
 header {
-  background-color: #8f8f8f;
-  padding: 15px;
-  text-align: center;
-  font-size: larger;
+  position: absolute;
+  background: #333;
   color: white;
-  display: flow-root;
+  width: 100%;
+  height: 100px;
+  display: block;
 }
 
+.encabezado{
+  width: -webkit-fill-available;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 750px;
+}
+
+
+.img-left-enc{
+  width: auto;
+  height: 100px;
+  float: left;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text-enc{
+  display: flex;
+  position: relative;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+  font-size: large;
+}
+
+.img-right-enc{
+  width: auto;
+  height: 100px;
+  float: right;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 
 table{
@@ -44,10 +91,13 @@ td{
 
 .sidebar{
   position: absolute;
+  margin-top: 100px;
   height: -webkit-fill-available;
   background: #333;
   color:#fff;
   outline: 1px solid #2a2a2a;
+  font-size: 15px;
+  width: 210px;
 }
 
 .sidebar h2{
@@ -62,6 +112,7 @@ td{
   padding: 0;
   margin: 0;
 }
+
 
 .sidebar li{
   outline: 1px solid #2a2a2a;
@@ -98,6 +149,7 @@ td{
   background: white;
   border-radius: 5px;
   padding: 20px;
+  border: solid 1px;
 }
 
 .contenido_modal h2{
@@ -111,15 +163,16 @@ td{
 }
 
   
-  article {
-    margin-left: 200px;
-    padding: 20px;
-    height: auto;
-  }
-  
-  /* Clear floats after the columns */
-  section:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+article {
+  position: absolute;
+  margin-left: 210px;
+  margin-top: 100px;
+  padding-left: 15px;
+  padding-top: 5px;
+  height: auto;
+}
+
+article h1{
+  font-size: 20px;
+}
+

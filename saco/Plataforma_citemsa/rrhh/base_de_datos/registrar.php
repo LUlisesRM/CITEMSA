@@ -22,13 +22,25 @@ $count = mysqli_num_rows($consulta);
 </head>
 
 <body>
-  <div class="contenido">
-    <header>
-      <h2><img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="120px" align="left">
+  <div>
+    
+  <header>
+    <div class="encabezado">
+      <div class="img-left-enc">
+        <img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="150px">
+      </div>
+
+      <div class="text-enc">
+        CORREDOR INTEGRAL DE TRANSPORTE EDUARDO MOLINA CITEMSA S.A. DE C.V.
+        <br>
         SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
-        <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="100px" align="right">
-      </h2>
-    </header>
+      </div>
+
+      <div class="img-right-enc">
+        <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="130px">
+      </div>
+    </div>
+  </header>
 
     <section>
 

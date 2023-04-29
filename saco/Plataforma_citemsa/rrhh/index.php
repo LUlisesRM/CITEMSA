@@ -16,32 +16,46 @@ $sql = "SELECT * FROM padmon WHERE credencial_mb = '$credencial'";
     
 </head>
 <body>
-<header>
-  <h2><img src="../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
-  SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
-  <img src="../../media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"></h2>
-</header>
 
-<section>
-  <nav>
-  <div class=sidebar>
-      <h2>Menú</h2>
-      <ul>
-        <li><a href='../index.php'>INICIO</a></li>
-        <li><a href='index.php'>OPERACIONES</a></li>
-        <li><a href='../administracion/index.php'>ADMINISTRACION</a></li>
-        <li><a href='index.php'>RECURSOS HUMANOS</a>
-          <ul class=submenu>
-            <li class=menu__item><a href="base_de_datos/index.php" class=menu__link>Base de Datos</a></li>
-          </ul>
-        </li>
-        <li><a href='../../salir.php'>SALIR</a></li>
-      </ul>
+<header>
+  <div class="encabezado">
+    <div class="img-left-enc">
+      <img src="../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="150px">
     </div>
-  </nav>
-  
+
+    <div class="text-enc">
+      CORREDOR INTEGRAL DE TRANSPORTE EDUARDO MOLINA CITEMSA S.A. DE C.V.
+      <br>
+      SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
+    </div>
+
+    <div class="img-right-enc">
+      <img src="../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="130px">
+    </div>
+  </div>
+  </header>
+
+  <section>
+    <nav>
+      <div class=sidebar>
+        <h2>Menú</h2>
+        <ul class=menu id=menu>
+          <li class=menu__item><a href='../index.php'>INICIO</a></li>
+          <li class=menu__item><a href='../operaciones/index.php'>OPERACIONES</a></li>
+          <li><a href='../administracion/index.php'>ADMINISTRACION</a></li>
+          <li><a href='index.php'>RECURSOS HUMANOS</a>
+            <ul class=submenu>
+              <li class=menu__item><a href="base_de_datos/index.php" class=menu__link>Base de Datos</a></li>
+            </ul>
+          </li>
+          <li><a href='../../salir.php'>SALIR</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
   <article>
-  <h1><font SIZE=5>RECURSOS HUMANOS 
+  <h1>RECURSOS HUMANOS 
     
     <?php
         $consulta = mysqli_query($conexion,$sql);
@@ -62,7 +76,6 @@ $sql = "SELECT * FROM padmon WHERE credencial_mb = '$credencial'";
 
     ?>
   
-  </font> 
   </h1>
     
    

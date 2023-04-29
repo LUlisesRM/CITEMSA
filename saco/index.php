@@ -11,29 +11,26 @@
 </head>
 
 <body class=fondo>
-    
-<div >
-    <form method="POST" action="login.php" class="login">
-        <div>
-            <img src="media/LOGO_MBL5.png" alt="LOGO CITEMSA" width = "120px" align="left">
-            <a href= "../inicio/index.php"><img src="media/logo_citemsa.png" alt="LOGO CITEMSA" width = "100px" align="right"></a> <br><br>
-        </div>
-        <div class="form-group">
+
+    <div>
+        <form method="POST" action="login.php" class="login">
+            <div>
+                <img src="media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="120px" align="left">
+                <a href="../inicio/index.php"><img src="media/logo_citemsa.png" alt="LOGO CITEMSA" width="100px" align="right"></a> <br><br>
+            </div>
             <div>
                 <label>Credencial MB</label><br>
-                <input name="credencial" placeholder="Escriba su credencial de Metrobus" required size="47">
-            </div>
-            <div>
-             <label>Contraseña</label><br>
-             <input type="password" name="pass" placeholder="Escriba su contraseña" required size="47">
+                <input name="credencial" placeholder="Escriba su credencial de Metrobus" required> <br>
+                <label>Contraseña</label><br>
+                <input type="password" name="pass" placeholder="Escriba su contraseña" required>
             </div><br>
             <div align="center">
-             <button type="submit" >Inicar Sesion</button>
+                <button type="submit">Inicar Sesion</button>
             </div>
-        </div>
-        
+    </div>
+
     </form>
-</div>
+    </div>
 
 </body>
 
