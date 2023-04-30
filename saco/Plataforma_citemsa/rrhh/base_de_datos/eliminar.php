@@ -14,5 +14,5 @@ if($consulta){
     window.location='index.php';</script>";
 }else{
     echo"<script>alert('No se pudieron insertar los datos'); window.history.go(-1);</script>";
-
+}
 ?>
