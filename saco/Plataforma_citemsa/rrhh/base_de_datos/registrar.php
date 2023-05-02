@@ -68,12 +68,7 @@ $count = mysqli_num_rows($consulta);
         <table border="2px">
           <tr>
             <th>CREDENCIAL METROBUS</th>
-            <th>NOMINA</th>
-            <th>NOMBRE</th>
-            <th>ESTATUS</th>
-            <th>TIPO DE LICENCIA</th>
-            <th>ID DE LICENCIA</th>
-            <th>VENCIMIENTO DE LA LICENCIA</th>
+            <th>NOMBRE</th>        
           </tr>
 
           <?php
@@ -84,12 +79,7 @@ $count = mysqli_num_rows($consulta);
 
               echo "<tr>";
               echo "<td>" . $row['credencial_mb'] . "</td>";
-              echo "<td>" . $row['nomina'] . "</td>";
               echo "<td>" . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . ' ' . $row['nombre'] . "</td>";
-              echo "<td>" . $row['estatus'] . "</td>";
-              echo "<td>" . $row['tipo_licencia'] . "</td>";
-              echo "<td>" . $row['id_licencia'] . "</td>";
-              echo "<td>" . $row['vencimiento_licencia'] . "</td>";
               echo "</tr>";
             }
           } else {
