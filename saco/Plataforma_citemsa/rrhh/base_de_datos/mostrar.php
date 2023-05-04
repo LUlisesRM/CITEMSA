@@ -106,9 +106,9 @@
 
 
                 while ($row = mysqli_fetch_assoc($consulta)) {
-                    echo "<h2>DATOS DEL OPERADOR </h2>";
+                    echo "<div><h2>DATOS DEL OPERADOR</h2></div>";
                     echo "<type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
-                    echo "<table border='2px'>";
+                    echo "<div><table class=tabla_modal>";
                     echo "<tr>";
                     ?>
             
@@ -124,7 +124,7 @@
                     echo "VENCIMIENTO DE LICENCIA:".$row['vencimiento_licencia']. "<br><br>";
                     echo "CURP:".$row['curp']. "<br><br>";
                     echo "NUMERO DE SEGURO SOCIAL:".$row['nss']. "</td></tr>";
-                    echo "</table>";
+                    echo "</table><div>";
 
                     echo "<br>";
 
