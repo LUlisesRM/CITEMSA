@@ -61,34 +61,39 @@ $count = mysqli_num_rows($consulta);
     </nav>
 
     <article>
+      <div>
       <h1>BASE DE DATOS OPERADORES</h1>
+      </div>
 
-      <table border="2px">
-        <tr>
-          <th>CREDENCIAL DE METROBUS</th>
-          <th>NOMBRE</th>
-        </tr>
-        <?php
-        if ($count > 0) {
 
-          while ($row = mysqli_fetch_assoc($consulta)) {
+      <div>
+        <table class="centered">
+          <tr>
+            <th>CREDENCIAL DE METROBUS</th>
+            <th>NOMBRE</th>
+          </tr>
+          <?php
+          if ($count > 0) {
 
-            echo "<tr>";
-            echo "<td><a href= mostrar.php?id=" .$row['id_operador']. ">" . $row['credencial_mb'] . "</a></td>";
-            echo "<td>" . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . ' ' . $row['nombre'] . "</td>";
-            echo "</tr>";
+            while ($row = mysqli_fetch_assoc($consulta)) {
+
+              echo "<tr>";
+              echo "<td><a href= mostrar.php?id=" . $row['id_operador'] . ">" . $row['credencial_mb'] . "</a></td>";
+              echo "<td>" . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . ' ' . $row['nombre'] . "</td>";
+              echo "</tr>";
+            }
+          } else {
+            echo "<h1>Sin registro</h1>";
           }
-        } else {
-          echo "<h1>Sin registro</h1>";
-        }
 
-        ?>
-      </table>
-      <br>
-      <button><a href="registrar.php">Regristrar</a></button>
-
-      <br>
-
+          ?>
+        </table>
+        <br><br>
+        <div align=center>
+        <button ><a href="registrar.php">Regristrar</a></button>
+        </div>
+        <br>
+      </div>
     </article>
   </section>
 

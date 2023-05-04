@@ -67,27 +67,42 @@ header {
 }
 
 
-table{
-  display: flexbox;
-  font-size: 15px;
+table, th, td {
+  border: none;
+}
+
+table {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.centered thead tr th, table.centered tbody tr td {
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+td, th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 2px;
 }
 
 form{
   display: flexbox;
 }
 
-th{
-  
-  display: table-cell;
-  font-weight: 550;
-  text-align: center;
-}
 
-td{ 
-  
-  text-align: left;
-  border: 1px solid #999;
-}
 
 .sidebar{
   position: absolute;
@@ -142,6 +157,7 @@ article {
 
 article h1{
   font-size: 20px;
+  width: 1000px;
 }
 
 .modal{

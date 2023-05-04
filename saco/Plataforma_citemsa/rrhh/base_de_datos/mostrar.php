@@ -106,24 +106,24 @@
 
 
                 while ($row = mysqli_fetch_assoc($consulta)) {
+                    echo "<h2>DATOS DEL OPERADOR </h2>";
                     echo "<type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
                     echo "<table border='2px'>";
-                    echo "<caption>DATOS DEL OPERADOR</caption>";
                     echo "<tr>";
                     ?>
-
-                    <td><img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
+            
+                    <td><img height = '200px' name = 'imagen' src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
                     
                     <?php
-                    echo "<td> NOMBRE:".$row['nombre']. ' '.$row['apellido_paterno'].' '.$row['apellido_materno']. "<br>";
-                    echo "CREDENCIAL METROBUS:" .$row['credencial_mb']. "<br>";
-                    echo "NOMINA:".$row['nomina']. "<br>";
-                    echo "ESTATUS:".$row['estatus']. "<br>";
-                    echo "FECHA DE CONTRATO:".$row['fecha_contrato']. "<br>";
-                    echo "ID DE LICENCIA:".$row['id_licencia']. "<br>";
-                    echo "VENCIMIENTO DE LICENCIA:".$row['vencimiento_licencia']. "<br>";
-                    echo "CURP:".$row['curp']. "<br>";
-                    echo "NUMERO DE SEGURO SOCIAL:".$row['nss']. "<td></tr>";
+                    echo "<td> NOMBRE:".$row['nombre']. ' '.$row['apellido_paterno'].' '.$row['apellido_materno']. "<br><br>";
+                    echo "CREDENCIAL METROBUS:" .$row['credencial_mb']. "<br><br>";
+                    echo "NOMINA:".$row['nomina']. "<br><br>";
+                    echo "ESTATUS:".$row['estatus']. "<br><br>";
+                    echo "FECHA DE CONTRATO:".$row['fecha_contrato']. "<br><br>";
+                    echo "ID DE LICENCIA:".$row['id_licencia']. "<br><br>";
+                    echo "VENCIMIENTO DE LICENCIA:".$row['vencimiento_licencia']. "<br><br>";
+                    echo "CURP:".$row['curp']. "<br><br>";
+                    echo "NUMERO DE SEGURO SOCIAL:".$row['nss']. "</td></tr>";
                     echo "</table>";
 
                     echo "<br>";

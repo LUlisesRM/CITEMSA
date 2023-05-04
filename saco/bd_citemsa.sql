@@ -9,7 +9,7 @@ use  bd_citemsa;
 
 CREATE TABLE operadores(
 id_operador int(10) not null,
-imagen longblob not null,
+imagen longblob,
 credencial_mb int(4) not null,
 nomina int(8) not null,
 contraseña varchar (20) not null,

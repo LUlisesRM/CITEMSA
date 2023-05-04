@@ -92,7 +92,7 @@
     </section>
 
     <div class="modal">
-        <div class="contenido_modal">
+        <div class="contenido_modal" align=center>
             
                 <?php
                 include("../../../conexion.php");
@@ -107,14 +107,17 @@
 
                     while ($row = mysqli_fetch_assoc($consulta)) {
 
-                        echo "<type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
+                        echo "<h2>DATOS DEL OPERADOR </h2>";
+                        echo "<form action='update.php' method = 'POST' enctype='multipart/form-data' >";
                         echo "<table>";
-                        echo "<caption>DATOS DEL OPERADOR</caption>";
                         echo "<tr>";
-                        echo "<td> <form action='update.php' method = 'post' enctype='multipart/form-data'> 
-                                <input type='file' name='imagen'>
-                        </td>";
-                        echo "<td>";
+                        ?>
+                        
+                        <td><input type='file' name='imagen' ></td>
+                        
+                        <?php
+                        echo "<td> ";
+                        echo "<input type='hidden' name = 'id' value=" . $row['id_operador'] . ">";
                         echo "NOMBRE: <input type='text' name = 'nombre' value=".$row['nombre']."><input type='text' name = 'apellido_paterno' value=".$row['apellido_paterno']. "><input type='text' name = 'apellido_materno' value=".$row['apellido_materno']. "><br>";
                         echo "CREDENCIAL METROBUS: <input type='text' name = 'credencial_mb' value=" . $row['credencial_mb'] . "><br>";
                         echo "NOMINA: <input type='text' name = 'nomina' value=" . $row['nomina'] . "><br>";
