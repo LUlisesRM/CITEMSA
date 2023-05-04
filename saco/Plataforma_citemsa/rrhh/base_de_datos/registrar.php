@@ -114,8 +114,6 @@ $count = mysqli_num_rows($consulta);
         <input name='estatus' required type='text'>
         <lable>FECHA DE CONTRATO:</lable>
         <input name='fecha_contrato' required type='date'> <br><br>
-        <lable>TIPO DE LICENCIA:</lable>
-        <input name='tipo_licencia' required type='text'>
         <lable>ID LICENCIA:</lable>
         <input name='id_licencia' required type='text'>
         <lable>VENCIMIENTO DE LICENCIA:</lable>

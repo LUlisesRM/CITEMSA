@@ -9,6 +9,7 @@ use  bd_citemsa;
 
 CREATE TABLE operadores(
 id_operador int(10) not null,
+imagen longblob not null,
 credencial_mb int(4) not null,
 nomina int(8) not null,
 contraseña varchar (20) not null,
@@ -65,9 +66,40 @@ alter table padmon
 change column id_padmon id_padmon int(10) not null auto_increment,
 add primary key (id_padmon);
 
+INSERT INTO padmon (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
+fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
+VALUES ('3309','88','123456','PEDRAZA','QUIROZ','MARIO ALBERTO', 'ACTIVO','2013-11-05', 'TIPO C','C525525','2025-01-13',
+'PEQM710426HDFDRR05','PC0','05147102346','5550080107','07420');
+
+INSERT INTO padmon (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
+fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
+VALUES ('0001','00','123456','REYES','MILAN','LUIS ULISES', 'ACTIVO','2022-01-18', 'TIPO C','C000000','2024-01-01',
+'REML961130HDFYLS01','2LA','10000000000','5575357042','07420');
+
+
 INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
 fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
-VALUES ('3182','57','AGUILAR','CABRERA','HECTOR', 'ACTIVO','2013-11-05', 'TIPO C','C520621','2024-11-19',
+VALUES ('3182','57','123456','AGUILAR','CABRERA','HECTOR', 'ACTIVO','2013-11-05', 'TIPO C','C520621','2024-11-19',
 'AUCH670305HDFGBC06','GU5','30876718229','5521444349','15280');
+
+INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
+fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
+VALUES ('6714','312','123456','AGUIRRE','BURGOS','NORBERTO MELCHOR', 'ACTIVO','2020-09-10', 'TIPO C','N481314','2024-05-21',
+'AUBN840606HDFGRR05','CH2','45028443831','5569680834','07440');
+
+INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
+fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
+VALUES ('3175','5','123456','ALVARADO','VELAZQUEZ','SALVADOR', 'ACTIVO','2013-11-05', 'TIPO C','C490314','2024-07-14',
+'AAVS690113HDFLLL05','LG8','75866910054','5527521624','07410');
+
+INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
+fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
+VALUES ('3182','57','123456','AGUILAR','CABRERA','HECTOR', 'ACTIVO','2013-11-05', 'TIPO C','C520621','2024-11-19',
+'AUCH670305HDFGBC06','GU5','30876718229','5521444349','15280');
+
+INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
+fecha_contrato,tipo_licencia,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
+VALUES ('7733','409','123456','CASTILLON','FRANCO','EDUARDO', 'ACTIVO','2022-06-04', 'TIPO C','R546834','2023-09-08',
+'CAFE820730HDFSRD06','JE3','45998212752','5514906005','09700');
 
 /* UPDATE padmon set codigo_postal = '55540' where id_padmon = 2 */

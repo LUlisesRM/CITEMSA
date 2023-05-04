@@ -93,19 +93,7 @@
 
     <div class="modal">
         <div class="contenido_modal">
-            <h2>OPERADOR</h2> <br>
-
-            <table border="2px">
-                <tr>
-                    <th>CREDENCIAL METROBUS</th>
-                    <th>NOMINA</th>
-                    <th>NOMBRE</th>
-                    <th>ESTATUS</th>
-                    <th>TIPO DE LICENCIA</th>
-                    <th>ID DE LICENCIA</th>
-                    <th>VENCIMIENTO DE LA LICENCIA</th>
-                </tr>
-
+            
                 <?php
                 include("../../../conexion.php");
 
@@ -119,30 +107,35 @@
 
                     while ($row = mysqli_fetch_assoc($consulta)) {
 
-                        echo "<form action='update.php' method = 'post'>";
+                        echo "<type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
+                        echo "<table>";
+                        echo "<caption>DATOS DEL OPERADOR</caption>";
                         echo "<tr>";
-                        echo "<input type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
-                        echo "<td><input type='text' name = 'credencial_mb' value=" . $row['credencial_mb'] . "></td>";
-                        echo "<td><input type='text' name = 'nomina' value=" . $row['nomina'] . "></td>";
-                        echo "<td><input type='text' name = 'apellido_paterno' value=" . $row['apellido_paterno'] . ">
-                        <input type='text' name = 'apellido_materno' value=" . $row['apellido_materno'] . ">
-                  <input type='text' name = 'nombre' value=" . $row['nombre'] . "></td>";
-                        echo "<td>
-                  <input type='text' name = 'estatus' value=" . $row['estatus'] . "></td>";
-                        echo "<td>
-                  <input type='text' name = 'tipo_licencia' value=" . $row['tipo_licencia'] . "></td>";
-                        echo "<td>
-                  <input type='text' name = 'id_licencia' value=" . $row['id_licencia'] . "></td>";
-                        echo "<td>
-                  <input type='date' name = 'vencimiento_licencia' value=" . $row['vencimiento_licencia'] . "></td>";
-                        
+                        echo "<td> <form action='update.php' method = 'post' enctype='multipart/form-data'> 
+                                <input type='file' name='imagen'>
+                        </td>";
+                        echo "<td>";
+                        echo "NOMBRE: <input type='text' name = 'nombre' value=".$row['nombre']."><input type='text' name = 'apellido_paterno' value=".$row['apellido_paterno']. "><input type='text' name = 'apellido_materno' value=".$row['apellido_materno']. "><br>";
+                        echo "CREDENCIAL METROBUS: <input type='text' name = 'credencial_mb' value=" . $row['credencial_mb'] . "><br>";
+                        echo "NOMINA: <input type='text' name = 'nomina' value=" . $row['nomina'] . "><br>";
+                        echo "ESTATUS: <input type='text' name = 'estatus' value=" . $row['estatus'] . "><br>";
 
-                        echo "</tr>";
+
+                        echo "FECHA DE CONTRATO: <input type='text' name = 'fecha_contrato' value=" . $row['fecha_contrato'] . "><br>";
+                        echo "ID DE LICENCIA: <input type='text' name = 'id_licencia' value=" . $row['id_licencia'] . "><br>";
+                        echo "VENCIMIENTO DE LICENCIA: <input type='date' name = 'vencimiento_licencia' value=" . $row['vencimiento_licencia'] . "><br>";
+                        echo "CURP: <input type='text' name = 'curp' value=" . $row['curp'] . "><br>";
+                        echo "NUMERO DE SEGURO SOCIAL: <input type='text' name = 'nss' value=" . $row['nss'] . "><br>";
+
+                        echo "</td></tr>";
                         echo "</table> <br>";
                         echo "<input type='submit' value = 'ACEPTAR'>";
                         echo "</form>";
                        
                         echo "<button><a href= mostrar.php?id=" . $row['id_operador'] . ">CANCELAR</a></button>";
+
+
+
                     }
                 } else {
                     echo "<h1>Sin registro</h1>";

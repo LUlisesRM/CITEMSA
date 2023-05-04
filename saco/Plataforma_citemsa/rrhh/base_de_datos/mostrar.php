@@ -92,54 +92,52 @@
     </section>
 
     <div class="modal">
-        <div class="contenido_modal">
-            <h2>OPERADOR</h2> <br>
+        <div class="contenido_modal" align=center>
 
-            <table border="2px">
-                <tr>
-                    <th>CREDENCIAL METROBUS</th>
-                    <th>NOMINA</th>
-                    <th>NOMBRE</th>
-                    <th>ESTATUS</th>
-                    <th>TIPO DE LICENCIA</th>
-                    <th>ID DE LICENCIA</th>
-                    <th>VENCIMIENTO DE LA LICENCIA</th>
-                </tr>
+            <?php
+            include("../../../conexion.php");
 
-                <?php
-                include("../../../conexion.php");
+            $id = $_GET["id"];
+            $sql = "SELECT * FROM operadores WHERE id_operador = '$id'";
+            $consulta = mysqli_query($conexion, $sql);
+            $count = mysqli_num_rows($consulta);
 
-                $id = $_GET["id"];
-                $sql = "SELECT * FROM operadores WHERE id_operador = '$id'";
-                $consulta = mysqli_query($conexion, $sql);
-                $count = mysqli_num_rows($consulta);
-
-                if ($count > 0) {
+            if ($count > 0) {
 
 
-                    while ($row = mysqli_fetch_assoc($consulta)) {
+                while ($row = mysqli_fetch_assoc($consulta)) {
+                    echo "<type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
+                    echo "<table border='2px'>";
+                    echo "<caption>DATOS DEL OPERADOR</caption>";
+                    echo "<tr>";
+                    ?>
 
-                        echo "<tr>";
-                        echo "<input type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
-                        echo "<td>" . $row['credencial_mb'] . "</td>";
-                        echo "<td>" . $row['nomina'] . "</td>";
-                        echo "<td>" . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . ' ' . $row['nombre'] . "</td>";
-                        echo "<td>" . $row['estatus'] . "</td>";
-                        echo "<td>" . $row['tipo_licencia'] . "</td>";
-                        echo "<td>" . $row['id_licencia'] . "</td>";
-                        echo "<td>" . $row['vencimiento_licencia'] . "</td>";
-                        echo "</tr>";
-                        echo "</table>";
-                        echo "<button><a href= editar.php?id=" . $row['id_operador'] . ">EDITAR</a></button>";
-                        echo "<button><a href= eliminar.php?id=" . $row['id_operador'] . ">ELIMINAR</a></button>";
-                    }
-                } else {
-                    echo "<h1>Sin registro</h1>";
+                    <td><img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
+                    
+                    <?php
+                    echo "<td> NOMBRE:".$row['nombre']. ' '.$row['apellido_paterno'].' '.$row['apellido_materno']. "<br>";
+                    echo "CREDENCIAL METROBUS:" .$row['credencial_mb']. "<br>";
+                    echo "NOMINA:".$row['nomina']. "<br>";
+                    echo "ESTATUS:".$row['estatus']. "<br>";
+                    echo "FECHA DE CONTRATO:".$row['fecha_contrato']. "<br>";
+                    echo "ID DE LICENCIA:".$row['id_licencia']. "<br>";
+                    echo "VENCIMIENTO DE LICENCIA:".$row['vencimiento_licencia']. "<br>";
+                    echo "CURP:".$row['curp']. "<br>";
+                    echo "NUMERO DE SEGURO SOCIAL:".$row['nss']. "<td></tr>";
+                    echo "</table>";
+
+                    echo "<br>";
+
+                    echo "<button><a href= editar.php?id=" . $row['id_operador'] . ">EDITAR</a></button>";
+                    echo "<button><a href= eliminar.php?id=" . $row['id_operador'] . ">ELIMINAR</a></button>";
                 }
+            } else {
+                echo "<h1>Sin registro</h1>";
+            }
 
-                ?>
+            ?>
 
-                <button><a href='index.php'>REGRESAR</a></button>
+            <button><a href='index.php'>REGRESAR</a></button>
 
         </div>
     </div>
