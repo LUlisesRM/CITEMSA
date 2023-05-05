@@ -109,11 +109,11 @@
 
                         echo "<h2>DATOS DEL OPERADOR </h2>";
                         echo "<form action='update.php' method = 'POST' enctype='multipart/form-data' >";
-                        echo "<table>";
+                        echo "<table class='tabla_modal'>";
                         echo "<tr>";
                         ?>
                         
-                        <td><input type='file' name='imagen' ></td>
+                        <td>imagen<input type='file' name='imagen' ></td>
                         
                         <?php
                         echo "<td> ";
@@ -127,12 +127,12 @@
                         echo "FECHA DE CONTRATO: <input type='text' name = 'fecha_contrato' value=" . $row['fecha_contrato'] . "><br>";
                         echo "ID DE LICENCIA: <input type='text' name = 'id_licencia' value=" . $row['id_licencia'] . "><br>";
                         echo "VENCIMIENTO DE LICENCIA: <input type='date' name = 'vencimiento_licencia' value=" . $row['vencimiento_licencia'] . "><br>";
-                        echo "CURP: <input type='text' name = 'curp' value=" . $row['curp'] . "><br>";
+                        echo "CURP: <input type='text' name = 'curp' style='width:168px;' value=" . $row['curp'] . "><br>";
                         echo "NUMERO DE SEGURO SOCIAL: <input type='text' name = 'nss' value=" . $row['nss'] . "><br>";
 
                         echo "</td></tr>";
                         echo "</table> <br>";
-                        echo "<input type='submit' value = 'ACEPTAR'>";
+                        echo "<input type='submit' value = 'ACEPTAR' style='width:89px;'>";
                         echo "</form>";
                        
                         echo "<button><a href= mostrar.php?id=" . $row['id_operador'] . ">CANCELAR</a></button>";

@@ -89,14 +89,21 @@ $count = mysqli_num_rows($consulta);
           ?>
         </table>
         <br><br>
+        
         <div align=center>
-        <button ><a href="registrar.php">Regristrar</a></button>
+        <a  href="registrar.php" >Registrar</a>
         </div>
+        
+        
         <br>
+        
       </div>
+      
     </article>
+    
   </section>
 
+  
 
 </body>
 

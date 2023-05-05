@@ -23,24 +23,24 @@ $count = mysqli_num_rows($consulta);
 
 <body>
   <div>
-    
-  <header>
-    <div class="encabezado">
-      <div class="img-left-enc">
-        <img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="150px">
-      </div>
 
-      <div class="text-enc">
-        CORREDOR INTEGRAL DE TRANSPORTE EDUARDO MOLINA CITEMSA S.A. DE C.V.
-        <br>
-        SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
-      </div>
+    <header>
+      <div class="encabezado">
+        <div class="img-left-enc">
+          <img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="150px">
+        </div>
 
-      <div class="img-right-enc">
-        <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="130px">
+        <div class="text-enc">
+          CORREDOR INTEGRAL DE TRANSPORTE EDUARDO MOLINA CITEMSA S.A. DE C.V.
+          <br>
+          SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
+        </div>
+
+        <div class="img-right-enc">
+          <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="130px">
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
     <section>
 
@@ -68,7 +68,7 @@ $count = mysqli_num_rows($consulta);
         <table border="2px">
           <tr>
             <th>CREDENCIAL METROBUS</th>
-            <th>NOMBRE</th>        
+            <th>NOMBRE</th>
           </tr>
 
           <?php
@@ -97,34 +97,36 @@ $count = mysqli_num_rows($consulta);
       <h2>REGISTRAR</h2> <br>
 
       <form action='insertar.php' method='post'>
-        <lable>CREDENCIAL METROBUS:</lable>
-        <input name='credencial_mb' required type='text'>
-        <lable>NOMINA:</lable>
-        <input name='nomina' required type='int'> <br>
-        <lable>CONTRASEÑA:</lable>
-        <input name='contraseña' required type='int'> <br><br>
+        <lable>NOMBRE:</lable>
+        <input name='nombre' required type='text'>
         <lable>APELLIDO PATERNO:</lable>
         <input name='apellido_paterno' required type='text'>
         <lable>APELLIDO MATERNO:</lable>
         <input name='apellido_materno' required type='text'>
-        <lable>NOMBRE:</lable>
-        <input name='nombre' required type='text'> <br><br>
+
+        <lable>CREDENCIAL METROBUS:</lable>
+        <input name='credencial_mb' required type='text'>
+        <lable>NOMINA:</lable>
+        <input name='nomina' required type='int'>
+        <lable>CONTRASEÑA:</lable>
+        <input name='contraseña' required type='int'>
+
 
         <lable>ESTATUS:</lable>
         <input name='estatus' required type='text'>
         <lable>FECHA DE CONTRATO:</lable>
-        <input name='fecha_contrato' required type='date'> <br><br>
+        <input name='fecha_contrato' required type='date'>
         <lable>ID LICENCIA:</lable>
         <input name='id_licencia' required type='text'>
         <lable>VENCIMIENTO DE LICENCIA:</lable>
-        <input name='vencimiento_licencia' required type='date'> <br><br>
+        <input name='vencimiento_licencia' required type='date'>
 
         <lable>CURP:</lable>
         <input name='curp' required type='text'>
-        <lable>HOMOCLAVE:</lable> 
-        <input name='homoclave' required type='text'><br>
+        <lable>HOMOCLAVE:</lable>
+        <input name='homoclave' required type='text'>
         <lable>NUMERO DE SEGURO SOCIAL (NSS):</lable>
-        <input name='nss' required type='int'><br>
+        <input name='nss' required type='int'>
         <lable>TELEFONO:</lable>
         <input name='telefono' required type='int'>
         <lable>CODIGO POSTAL:</lable>
