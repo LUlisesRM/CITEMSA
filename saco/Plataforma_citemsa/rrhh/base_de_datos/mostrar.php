@@ -112,24 +112,22 @@
                     echo "<tr>";
                     ?>
             
-                    <td><img height = '200px' name = 'imagen' src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
+                    <td><img height = '300px' name = 'imagen' src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
                     
                     <?php
-                    echo "<td> NOMBRE:".$row['nombre']. ' '.$row['apellido_paterno'].' '.$row['apellido_materno']. "<br><br>";
-                    echo "CREDENCIAL METROBUS:" .$row['credencial_mb']. "<br><br>";
-                    echo "NOMINA:".$row['nomina']. "<br><br>";
-                    echo "ESTATUS:".$row['estatus']. "<br><br>";
-                    echo "FECHA DE CONTRATO:".$row['fecha_contrato']. "<br><br>";
-                    echo "ID DE LICENCIA:".$row['id_licencia']. "<br><br>";
-                    echo "VENCIMIENTO DE LICENCIA:".$row['vencimiento_licencia']. "<br><br>";
-                    echo "CURP:".$row['curp']. "<br><br>";
-                    echo "NUMERO DE SEGURO SOCIAL:".$row['nss']. "</td></tr>";
-                    echo "</table><div>";
-
-                    echo "<br>";
-
-                    echo "<button><a href= editar.php?id=" . $row['id_operador'] . ">EDITAR</a></button>";
-                    echo "<button><a href= eliminar.php?id=" . $row['id_operador'] . ">ELIMINAR</a></button>";
+                    echo "<td> NOMBRE: ".$row['nombre']. ' '.$row['apellido_paterno'].' '.$row['apellido_materno']. "<br><br>";
+                    echo "CREDENCIAL METROBUS: " .$row['credencial_mb']. "<br><br>";
+                    echo "NOMINA: ".$row['nomina']. "<br><br>";
+                    echo "ESTATUS: ".$row['estatus']. "<br><br>";
+                    echo "FECHA DE CONTRATO: ".$row['fecha_contrato']. "<br><br>";
+                    echo "ID DE LICENCIA: ".$row['id_licencia']. "<br><br>";
+                    echo "VENCIMIENTO DE LICENCIA: ".$row['vencimiento_licencia']. "<br><br>";
+                    echo "CURP: ".$row['curp']. "<br><br>";
+                    echo "NUMERO DE SEGURO SOCIAL: ".$row['nss']. "</td></tr>";
+                    echo "</table>";
+                    echo "<button><a href= editar.php?id=" . $row['id_operador'] . ">EDITAR</a></button> ";
+                    echo "<button><a href= eliminar.php?id=" . $row['id_operador'] . ">ELIMINAR</a></button> <button><a href='index.php'>REGRESAR</a></button></div>";
+                    echo "";
                 }
             } else {
                 echo "<h1>Sin registro</h1>";
@@ -137,7 +135,6 @@
 
             ?>
 
-            <button><a href='index.php'>REGRESAR</a></button>
 
         </div>
     </div>

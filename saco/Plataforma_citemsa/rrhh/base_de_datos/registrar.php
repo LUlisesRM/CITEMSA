@@ -94,9 +94,10 @@ $count = mysqli_num_rows($consulta);
 
   <div class="modal">
     <div class="contenido_modal">
-      <h2>REGISTRAR</h2> <br>
-
-      <form action='insertar.php' method='post'>
+      <div align=center>
+      <h2>REGISTRO</h2> <br>
+      </div>
+      <form action='insertar.php' method = 'POST' enctype='multipart/form-data'>
         <lable>NOMBRE:</lable>
         <input name='nombre' required type='text'>
         <lable>APELLIDO PATERNO:</lable>
@@ -128,11 +129,18 @@ $count = mysqli_num_rows($consulta);
         <lable>NUMERO DE SEGURO SOCIAL (NSS):</lable>
         <input name='nss' required type='int'>
         <lable>TELEFONO:</lable>
-        <input name='telefono' required type='int'>
+        <input name='telefono' required type='int'><br>
         <lable>CODIGO POSTAL:</lable>
         <input name='codigo_postal' required type='int'>
-        <br> <br>
+        <br><br>
+        <div align=center>
+        <label>FOTOGRAFÍA:</label>
+        <input required type='file' name='imagen' style="width:300px;" ><br>
+        </div>
+        <br><br><br>
+        <div align=center>
         <input type='submit' value='ACEPTAR'> <button><a href='index.php'>CANCELAR</a></button>
+        </div>
 
 
       </form>

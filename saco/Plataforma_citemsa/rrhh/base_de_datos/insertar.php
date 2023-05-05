@@ -1,6 +1,7 @@
 <?php
 include ("../../../conexion.php");
 
+$imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 $credencial = $_POST['credencial_mb'];
 $nomina = $_POST['nomina'];
 $pass = $_POST["contraseña"];
@@ -18,9 +19,10 @@ $phone = $_POST['telefono'];
 $cp = $_POST['codigo_postal'];
 
 
-$sql = "INSERT INTO operadores (credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
+
+$sql = "INSERT INTO operadores (imagen,credencial_mb,nomina,contraseña,apellido_paterno,apellido_materno,nombre,estatus,
         fecha_contrato,id_licencia,vencimiento_licencia,curp,homoclave,nss,telefono,codigo_postal)
-        VALUES ('$credencial','$nomina','$pass','$paterno','$materno','$nombre', '$status','$contrato','$id_licencia',
+        VALUES ('$imagen','$credencial','$nomina','$pass','$paterno','$materno','$nombre', '$status','$contrato','$id_licencia',
         '$fecha_licencia','$curp','$homoc','$seguro','$phone','$cp')";
 
 

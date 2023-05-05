@@ -113,7 +113,8 @@
                         echo "<tr>";
                         ?>
                         
-                        <td>imagen<input type='file' name='imagen' ></td>
+                        
+                        <td><input required type='file' name='imagen' style="width: 265px;"></td>
                         
                         <?php
                         echo "<td> ";
@@ -131,12 +132,10 @@
                         echo "NUMERO DE SEGURO SOCIAL: <input type='text' name = 'nss' value=" . $row['nss'] . "><br>";
 
                         echo "</td></tr>";
-                        echo "</table> <br>";
-                        echo "<input type='submit' value = 'ACEPTAR' style='width:89px;'>";
+                        echo "</table> <br><br>";
+                        echo "<input type='submit' value = 'ACEPTAR' style='width:89px;'> <button><a href= mostrar.php?id=" . $row['id_operador'] . ">CANCELAR</a></button>";
                         echo "</form>";
-                       
-                        echo "<button><a href= mostrar.php?id=" . $row['id_operador'] . ">CANCELAR</a></button>";
-
+                    
 
 
                     }
